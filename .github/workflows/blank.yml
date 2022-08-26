@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Set default resource group
-        run: az config set defaults.location=uksouth defaults.group=test
+        run: az config set defaults.location=ukwest defaults.group=test
       - name: set file permissions
         run: chmod -R 744 session0*;ls -lR
       - name: Run 02
