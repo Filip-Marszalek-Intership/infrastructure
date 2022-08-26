@@ -19,7 +19,7 @@ jobs:
       - name: Set default resource group
         run: az config set defaults.location=uksouth defaults.group=test
       - name: set file permissions
-        run: pwd;cd ..; ls -R;chmod 744 session0*
+        run: chmod 744 session0*
       - name: Run 02
         run: ./session07/02/script2.sh -f session07/02/parameters_file
       - name: Run 03
