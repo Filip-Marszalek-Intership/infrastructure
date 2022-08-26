@@ -1,0 +1,3 @@
+vnetname: virtualnetwork
+subnetname: subnet
+nsgname: network security group
