@@ -75,4 +75,4 @@ region=$(az group show -n test --query "{location: location}" -o tsv)
 
 echo Deleting contents of $group...
 az group delete -n $group -y
-az group create -n $group --location $region
+az group create -n $group 

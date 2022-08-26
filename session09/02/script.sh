@@ -124,4 +124,4 @@ then
     read tier
 fi
 
-az storage account create --name $name --location $region --sku $sku --resource-group $group --access-tier $tier
+az storage account create --name $name --sku $sku --resource-group $group --access-tier $tier
