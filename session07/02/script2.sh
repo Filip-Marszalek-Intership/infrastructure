@@ -117,13 +117,13 @@ fi
 
 
 # Execute az commands
-az network vnet create --location "$REGION" --resource-group build-agents-01 --name $VNETNAME --address-prefix $ADDRESS
+az network vnet create --location "$REGION" --name $VNETNAME --address-prefix $ADDRESS
 
 # SUBNETS string to dictionary convrsion
 while read -d ',' line || [ -n "$line" ]; do
     KEY=''
     VALUE=''
     split_by_space $line
-    az network vnet subnet create --name $KEY --vnet-name $VNETNAME --resource-group build-agents-01 --address-prefixes $VALUE
+    az network vnet subnet create --name $KEY --vnet-name $VNETNAME --address-prefixes $VALUE
 done <<< $SUBNETS
 

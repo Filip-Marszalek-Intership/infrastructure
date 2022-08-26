@@ -102,5 +102,5 @@ fi
 
 
 # Execute az commands
-az network vnet subnet update -g build-agents-01 -n "$SUBNETNAME" --vnet-name "$VNETNAME" --network-security-group "$NSGNAME"
+az network vnet subnet update -n "$SUBNETNAME" --vnet-name "$VNETNAME" --network-security-group "$NSGNAME"
 

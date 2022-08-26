@@ -1,5 +1,5 @@
 name: testAppService
-group: build-agents-01
+group: test
 region: uksouth
 sku: F1
 dockerImage: filip246/hello_world_nginx
