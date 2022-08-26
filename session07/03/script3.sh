@@ -103,6 +103,6 @@ az network nsg create --name $NSGNAME --location "$REGION"
 
 # SUBNETS string to dictionary convrsion
 while read -d ',' line || [ -n "$line" ]; do
-    az network nsg rule create--nsg-name $NSGNAME $line
+    az network nsg rule create --nsg-name $NSGNAME $line
 done <<< $RULES
 
