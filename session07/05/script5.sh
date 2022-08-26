@@ -151,4 +151,8 @@ fi
     #az disk create --name ${VMNAME}_disk --size-gb 30 --resource-group build-agents-01 --tier $DISKTIER
 #fi
 
+<<<<<<< HEAD
 az vm create --name $VMNAME --ssh-key-value session07/05/public.rsa --storage-sku $DISKTIER --image $VMIMAGE --vnet-name $VNETNAME --subnet $SUBNETNAME --size $SIZE $RESIP $PUBNAME
+=======
+az vm create --name $VMNAME --generate-ssh-keys --storage-sku $DISKTIER --resource-group build-agents-01 --image $VMIMAGE --vnet-name $VNETNAME --subnet $SUBNETNAME --size $SIZE $RESIP $PUBNAME
+>>>>>>> 68be82e3bdc0e7f0fb6a58d0f8089548494bbb4d
