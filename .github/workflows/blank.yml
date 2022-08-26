@@ -30,8 +30,8 @@ jobs:
         env:
           RSA: ${{ secrets.RSA }}
         run: ./session07/05/script5.sh -f session07/05/parameters_file
-      - name: Run Session08
-        run: ./session08/script.sh -f session08/parameters_file
+      #- name: Run Session08
+        #run: ./session08/script.sh -f session08/parameters_file
       - name: Run Session09
         run: ./session09/02/script.sh -f session09/02/parameters_file
       - name: Run Session09
