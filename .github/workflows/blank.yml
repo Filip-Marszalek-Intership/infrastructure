@@ -36,3 +36,7 @@ jobs:
         run: ./session09/03/script.sh -f session09/03/parameters_file
       - name: Run Session09
         run: ./session09/04/script.sh -f session09/04/parameters_file
+      - name: rollback
+        if: failure()
+        run: ./session09/04/script.sh -f session09/04/parameters_file
+  
