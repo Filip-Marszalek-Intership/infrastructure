@@ -1,0 +1,25 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- checkout: self
+- task: AzureCLI@2
+  displayName: Azure CLI
+  inputs:
+    azureSubscription: 'azure'
+    scriptType: bash
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+        az config set defaults.location=ukwest defaults.group=test
+        chmod -R 744 session0*;ls -lR
+        ./session07/02/script2.sh -f session07/02/parameters_file
+        ./session07/03/script3.sh -f session07/03/parameters_file
+        ./session07/04/script4.sh -f session07/04/parameters_file
+        ./session07/05/script5.sh -f session07/05/parameters_file
+        ./session08/script.sh -f session08/parameters_file
+        ./session09/02/script.sh -f session09/02/parameters_file
+        ./session09/03/script.sh -f session09/03/parameters_file
+        ./session09/04/script.sh -f session09/04/parameters_file
